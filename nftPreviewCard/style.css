@@ -27,23 +27,53 @@ body {
   background-color: hsl(216, 50%, 16%);
   border-radius: 9px;
   width: 35rem;
-  height: 57rem;
-  padding: 1.8rem;
+  /* height: 57rem; */
+  padding: 1.8rem 1.8rem 2rem 1.8rem;
+  box-shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* 
-.img-container {
-  height: 25rem;
-  width: 25rem;
+/* Active image status 1.0  */
+
+/* .img-container {
+  height: 31.4rem;
+  width: 31.4rem;
   border-radius: 9px;
   background-image: url(images/image-equilibrium.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.img-container:hover {
+  background-image: url(images/image-equilibrium.jpg),
+    linear-gradient(hsla(178, 100%, 50%, 0.5));
 } */
+
+/* Active image status 2.0  */
+
+.img-container {
+  position: relative;
+}
 
 .img {
   width: 100%;
+  border-radius: 9px;
 }
+
+/* .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(178, 100%, 50%, 0.1);
+  z-index: 9999;
+  border-radius: 9px;
+} */
+
+/* .img:hover + .overlay {
+  background-color: hsla(178, 100%, 50%, 0.5);
+} */
 
 .heading {
   color: #fff;
@@ -51,6 +81,12 @@ body {
   font-weight: 400;
   letter-spacing: 1px;
   margin-bottom: 1.2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.heading:hover {
+  color: hsla(178, 100%, 50%);
 }
 
 .paragraph {
@@ -79,6 +115,7 @@ body {
 .days-text {
   color: hsl(215, 51%, 70%);
   font-size: 1.4rem;
+  margin-left: 0.8rem;
 }
 
 .auth-container {
@@ -101,4 +138,20 @@ body {
 .auth-span {
   color: #fff;
   font-size: 1.4rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.auth-span:hover {
+  color: hsla(178, 100%, 50%);
+}
+
+@media (max-width: 24em) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    width: 30rem;
+  }
 }
