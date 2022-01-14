@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: "Kumbh Sans", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  background-color: hsl(185, 75%, 39%);
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 100rem;
+  height: 100rem;
+  top: -70%;
+  left: -20%;
+  background-image: url(./images/bg-pattern-top.svg);
+  background-size: cover;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 100rem;
+  height: 100rem;
+  bottom: -70%;
+  right: -20%;
+  background-image: url(./images/bg-pattern-bottom.svg);
+  background-size: cover;
+  z-index: -1;
+}
