@@ -1,14 +1,16 @@
 .header {
   .nav {
-    padding: 1.8rem;
+    padding: 1.0625rem 1.5rem;
   }
 
-  &--logo {
+  &__logo {
     img {
+      width: 8.8125rem;
+      height: 1.375rem;
     }
   }
 
-  &--menu {
+  &__menu {
     gap: 0.2rem;
 
     > span {
@@ -16,12 +18,67 @@
       width: 2rem;
       height: 0.25rem;
       background-color: $darkBlue;
+      transition: all 0.2s ease-in-out;
+      transform-origin: 6px 2px;
+    }
+
+    &.open {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
     }
   } // mobile menu
 
-  &--links {
+  &__links {
     a {
+      position: relative;
       font-size: $fontSm;
+      transition: color 0.2s ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 5px;
+        background: linear-gradient(to right, $limeGreen, $brightCyan);
+        left: 0;
+        right: 0;
+        bottom: -30px;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      &:hover {
+        color: $darkBlue;
+
+        &::before {
+          opacity: 1;
+        }
+      }
     }
+  }
+
+  &__cta {
+    background: linear-gradient(to right, $limeGreen, $brightCyan);
+    font-weight: 400;
+    opacity: 1;
+    transition: 0.2 ease-in-out;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  .overlay {
   }
 }

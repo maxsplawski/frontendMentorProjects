@@ -20,23 +20,24 @@
       href="./images/favicon-32x32.png"
     />
 
-    <script defer src="/app/js/main.js"></script>
+    <script defer src="./app/js/main.js"></script>
 
     <title>Frontend Mentor | Easybank landing page</title>
   </head>
   <body>
     <header class="header">
+      <div class="overlay"></div>
       <nav class="nav flex flex--jc-sb flex--ai-c">
         <a class="header--logo" href="/">
           <img src="/images/logo.svg" alt="Logo"
         /></a>
-        <a class="header--menu flex flex--col" href="#">
+        <a class="header__menu flex flex--col hide-for-desktop" href="#">
           <span></span>
           <span></span>
           <span></span>
         </a>
 
-        <div class="header--links">
+        <div class="header__links hide-for-mobile">
           <a href="#">Home</a>
           <a href="#">About</a>
           <a href="#">Contact</a>
@@ -44,7 +45,7 @@
           <a href="#">Careers</a>
         </div>
 
-        <a class="btn" href="#">Request invite</a>
+        <a class="header__cta btn hide-for-mobile" href="#">Request invite</a>
       </nav>
     </header>
 
