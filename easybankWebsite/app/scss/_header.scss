@@ -1,28 +1,7 @@
 .header {
-  .nav {
-    padding: 1.0625rem 1.5rem;
-  }
-
-  &__logo {
-    img {
-      width: 8.8125rem;
-      height: 1.375rem;
-    }
-  }
-
-  &__menu {
-    gap: 0.2rem;
-
-    > span {
-      display: block;
-      width: 2rem;
-      height: 0.25rem;
-      background-color: $darkBlue;
-      transition: all 0.2s ease-in-out;
-      transform-origin: 6px 2px;
-    }
-
-    &.open {
+  // MOBILE MENU OPEN STULES
+  &.open {
+    .header__toggle {
       > span:first-child {
         transform: rotate(45deg);
       }
@@ -33,7 +12,62 @@
         transform: rotate(-45deg);
       }
     }
-  } // mobile menu
+  }
+  // mobile menu
+
+  .overlay {
+    opacity: 0;
+    position: fixed;
+    top: 3.75rem;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: linear-gradient($darkBlue, transparent);
+  }
+
+  .nav {
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
+  }
+
+  &__logo {
+    img {
+      width: 8.8125rem;
+      height: 1.375rem;
+    }
+  }
+
+  &__toggle {
+    gap: 0.2rem;
+
+    > span {
+      display: block;
+      width: 2rem;
+      height: 0.25rem;
+      background-color: $darkBlue;
+      transition: all 0.2s ease-in-out;
+      transform-origin: 6px 2px;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background: $white;
+    margin-top: 1.5rem;
+    padding: 0.625rem;
+    border-radius: 5px;
+    opacity: 0;
+
+    a {
+      display: block;
+      color: $darkBlue;
+      padding: 1rem 0.625rem;
+      text-align: center;
+    }
+  }
 
   &__links {
     a {
@@ -77,8 +111,5 @@
     &:hover {
       opacity: 0.75;
     }
-  }
-
-  .overlay {
   }
 }

@@ -17,6 +17,10 @@ body {
   font-size: $fontMed;
   font-weight: 300;
   color: $grayishBlue;
+
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 a,
@@ -36,6 +40,13 @@ a.btn {
 }
 
 // HELPER CLASSES
+
+// SPACING
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 
 // FLEXBOX
 
