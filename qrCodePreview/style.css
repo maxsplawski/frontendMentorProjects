@@ -9,9 +9,18 @@ html {
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
   background-color: #eee;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
 }
